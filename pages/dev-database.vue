@@ -30,6 +30,8 @@ const refresh = () => {
 const pageSize = 10;
 const currentPage = ref(1);
 const expanded = ref<number | null>(null);
+const deleting = ref<number | null>(null);
+const actionError = ref('');
 const words = computed(() => data.value?.words || []);
 const totalPages = computed(() =>
   Math.max(1, Math.ceil(words.value.length / pageSize)),
@@ -57,6 +59,20 @@ const cluesByWord = computed(() => {
 });
 const toggle = (id: number) => {
   expanded.value = expanded.value === id ? null : id;
+};
+const deleteWord = async (word: DatabaseWord) => {
+  if (!window.confirm(`Excluir a palavra "${word.word}" e todas as suas dicas? Essa ação não pode ser desfeita.`)) return;
+  deleting.value = word.id;
+  actionError.value = '';
+  try {
+    await $fetch('/api/dev/database', { method: 'POST', body: { action: 'delete', id: word.id } });
+    if (expanded.value === word.id) expanded.value = null;
+    await refreshData();
+  } catch (error) {
+    actionError.value = error instanceof Error ? error.message : 'Não foi possível excluir a palavra.';
+  } finally {
+    deleting.value = null;
+  }
 };
 const goToPage = (page: number) => {
   currentPage.value = Math.min(Math.max(page, 1), totalPages.value);
@@ -107,6 +123,7 @@ watch(
           ><span>categorias</span>
         </div>
       </div>
+      <p v-if="actionError" class="action-error" role="alert">{{ actionError }}</p>
       <section class="table-shell">
         <div class="table-toolbar">
           <div>
@@ -128,7 +145,7 @@ watch(
               <th>Nota</th>
               <th>Usos</th>
               <th>Dicas</th>
-              <th></th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -151,10 +168,10 @@ watch(
                 <td class="muted">
                   {{ cluesByWord.get(word.id)?.length || 0 }}
                 </td>
-                <td>
+                <td class="row-actions">
                   <button class="details-button" @click="toggle(word.id)">
                     {{ expanded === word.id ? "Ocultar" : "Ver dicas" }}
-                  </button>
+                  </button><button class="delete-button" :disabled="deleting === word.id" @click="deleteWord(word)">{{ deleting === word.id ? "Excluindo…" : "Excluir" }}</button>
                 </td>
               </tr>
               <tr v-if="expanded === word.id" class="clues-row">
@@ -404,6 +421,38 @@ watch(
 }
 .details-button:hover {
   text-decoration: underline;
+}
+.row-actions {
+  white-space: nowrap;
+}
+.delete-button {
+  margin-left: 10px;
+  padding: 7px 10px;
+  border: 1px solid #f0caca;
+  border-radius: 8px;
+  background: #fff7f7;
+  color: #b34a4a;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.delete-button:hover:not(:disabled),
+.delete-button:focus-visible {
+  background: #fbe5e5;
+  border-color: #d99595;
+}
+.delete-button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+.action-error {
+  margin: 20px 0 0;
+  padding: 12px 16px;
+  border: 1px solid #f0caca;
+  border-radius: 12px;
+  background: #fff7f7;
+  color: #a33f3f;
+  font-size: 13px;
 }
 .clues-row td {
   padding: 0;

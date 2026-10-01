@@ -83,6 +83,13 @@ export function listDatabase() {
   return { words, clues, categories, difficulties, subcategories }
 }
 
+export function deleteWord(id: number) {
+  const database = getDb()
+  const word = database.prepare('SELECT id FROM words WHERE id = ?').get(id)
+  if (!word) throw new Error('Palavra não encontrada')
+  database.prepare('DELETE FROM words WHERE id = ?').run(id)
+}
+
 export function updateConfiguration(type: 'category' | 'difficulty' | 'subcategory', key: string | number, description: string, weight = 0, category = '', name = '') {
   const database = getDb(); if (!description.trim() || !Number.isInteger(weight) || weight < 0) throw new Error('Configuração inválida')
   if (type === 'category') database.prepare('UPDATE categories SET description = ?, weight = ? WHERE name = ?').run(description.trim(), weight, String(key))
