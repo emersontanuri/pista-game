@@ -18,3 +18,4 @@ services:
 volumes:
   perfil-data:
     name: ${DATA_VOLUME_NAME:-pista-game_perfil-data}
+    external: true
