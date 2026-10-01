@@ -16,7 +16,6 @@ FROM node:22-bookworm-slim
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=builder /app/.output ./.output
-COPY --from=builder /app/scripts ./scripts
 COPY --from=builder /app/node_modules ./node_modules
 # Mantém o seed manual disponível no container sem executá-lo no startup.
 COPY --from=builder /app/server ./server
