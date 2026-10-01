@@ -1,7 +1,7 @@
 services:
   perfil:
     build: .
-    ports: ["8104:3000"]
+    ports: ["${APP_PORT:-8104}:3000"]
     environment:
       NODE_ENV: ${NODE_ENV:-production}
       NUXT_APP_ENV: ${NUXT_APP_ENV:-production}

@@ -10,3 +10,4 @@ dist
 .DS_Store
 .codex-remote-attachments/
 deploy.sh
+deploy-dev.sh
