@@ -1,0 +1,8 @@
+node_modules
+.nuxt
+.output
+.env
+coverage
+dist
+.DS_Store
+.codex-remote-attachments/

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 360" preserveAspectRatio="none" fill="none" aria-hidden="true">
+  <defs><pattern id="light-speckle" width="31" height="29" patternUnits="userSpaceOnUse"><circle cx="5" cy="7" r="1.1" fill="#fff" opacity=".35"/><circle cx="21" cy="18" r=".7" fill="#fff" opacity=".24"/><circle cx="29" cy="4" r=".55" fill="#fff" opacity=".2"/></pattern></defs>
+  <path d="M0 184c89-34 177-84 270-96 120-15 209 43 324 93 115 49 210 46 304 4 100-44 176-74 278-53 90 19 177 75 264 104v124H0V184Z" fill="#10274d"/>
+  <path d="M0 184c89-34 177-84 270-96 120-15 209 43 324 93 115 49 210 46 304 4 100-44 176-74 278-53 90 19 177 75 264 104v124H0V184Z" fill="url(#light-speckle)" opacity=".28"/>
+  <path d="M0 301c87-52 172-83 258-74 91 10 156 66 248 79 103 15 194-40 285-68 73-23 133-18 201 8l-62 114H0v-59Z" fill="#f6c445"/>
+  <path d="M0 301c87-52 172-83 258-74 91 10 156 66 248 79 103 15 194-40 285-68 73-23 133-18 201 8l-62 114H0v-59Z" fill="url(#light-speckle)" opacity=".24"/>
+  <path d="M744 360c88-57 185-108 286-132 108-26 226-14 410 53v79H744Z" fill="#56b89f"/>
+  <path d="M744 360c88-57 185-108 286-132 108-26 226-14 410 53v79H744Z" fill="url(#light-speckle)" opacity=".22"/>
+  <path d="M1109 360c17-68 54-119 111-140 69-25 143-4 220 42v98h-331Z" fill="#f4514b"/>
+  <path d="M1109 360c17-68 54-119 111-140 69-25 143-4 220 42v98h-331Z" fill="url(#light-speckle)" opacity=".24"/>
+</svg>

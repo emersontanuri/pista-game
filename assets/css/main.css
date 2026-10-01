@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{--navy:#10274d;--navy-soft:#29456f;--cream:#fff8ea;--paper:#fffdf8;--coral:#f4514b;--yellow:#f6c445;--mint:#56b89f;--muted:#7785a2;--line:#dfe5ef;--lavender:#f0f2f8;--shadow:0 18px 45px rgba(16,39,77,.09);--radius:22px;font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--cream);font-size:16px}
+*{box-sizing:border-box}body{margin:0;min-width:320px;background:var(--cream)}button{font:inherit}.app-shell{min-height:100vh;background:radial-gradient(circle at 8% 0%,#fff1c7 0,transparent 25%),radial-gradient(circle at 100% 40%,#e4f3f1 0,transparent 24%),var(--cream)}
+.topbar{height:88px;display:flex;align-items:center;gap:16px;padding:0 max(24px,calc((100vw - 1180px)/2));border-bottom:1px solid rgba(16,39,77,.12);background:rgba(255,253,248,.92);backdrop-filter:blur(12px)}
+.brand-lockup{display:flex;align-items:center;gap:10px}.brand-art{width:56px;height:56px;object-fit:contain}.brand-name{color:var(--navy);font:700 22px 'Space Grotesk'}.eyebrow{color:#607292;font-size:11px;font-weight:700;letter-spacing:.14em}.new-game-button{margin-left:auto;border:1px solid transparent;border-radius:12px;background:transparent;color:var(--navy);font-weight:700;padding:12px 16px;cursor:pointer}.new-game-button:hover{background:#fff0d7;border-color:#f5dca1}
+.main-layout{display:grid;grid-template-columns:minmax(0,780px) 280px;gap:32px;max-width:1180px;margin:0 auto;padding:52px 24px 36px}.main-column{min-width:0}.intro{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}.intro h2{font:700 32px 'Space Grotesk';margin:8px 0 0;letter-spacing:-.03em}.decorative-spark{display:inline-flex;align-items:center;gap:5px;transform:rotate(-18deg);margin-right:12px}.decorative-spark i{display:block;width:7px;height:21px;border-radius:99px;background:var(--yellow)}.decorative-spark i:nth-child(2){height:30px;transform:rotate(45deg)}.decorative-spark i:nth-child(3){height:16px;transform:rotate(90deg)}.spark-coral i{background:var(--coral)}.spark-mint i{background:var(--mint)}
+.game-card,.score-card,.state-card,.filters-card,.history-panel{background:rgba(255,253,248,.96);border:1px solid rgba(16,39,77,.14);border-radius:var(--radius);box-shadow:var(--shadow)}.game-card{padding:30px}.card-heading,.clue-header{display:flex;justify-content:space-between;align-items:center;gap:16px}.card-heading h1{font:700 30px 'Space Grotesk';margin:8px 0 0;letter-spacing:-.03em}.difficulty-label{display:block;margin-top:7px;color:var(--muted);font-size:14px;font-weight:600}.points-badge{display:inline-flex;align-items:baseline;gap:4px;padding:12px 15px;border-radius:14px;background:#e4f4ec;color:#258261;font-weight:700;white-space:nowrap}.points-badge span{font:700 20px 'Space Grotesk'}
+.answer-panel{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:16px;margin:28px 0 26px;padding:20px 22px;border-radius:18px;background:var(--lavender)}.answer-panel strong{min-width:0;font:700 24px 'Space Grotesk';overflow:hidden;text-overflow:ellipsis}.answer-panel strong.obscured{color:#8b99b7;font-size:19px}.text-button{border:0;background:none;color:#304fc0;font-weight:700;cursor:pointer;padding:8px 0}.text-button:hover{color:var(--coral)}.clue-header{margin-bottom:12px}.clue-header strong{display:block;margin-top:7px;font:700 18px 'Space Grotesk'}.hint{color:var(--muted);font-size:13px}.clue-list{padding:0;margin:0;list-style:none}.clue-list li{display:flex;align-items:center;gap:14px;min-height:52px;padding:11px 6px;border-bottom:1px solid #e9edf3;color:#9aa7bd;transition:.2s}.clue-list li.revealed{color:var(--navy)}.clue-list li.clickable{cursor:pointer}.clue-list li.clickable:hover{background:#fff3d8;color:#304f82}.clue-number{display:grid;place-items:center;flex:none;width:32px;height:26px;border-radius:99px;background:#eef1f7;color:#72809e;font:600 13px 'Space Grotesk'}.clue-text{flex:1;line-height:1.35}.clue-check{color:#259b73;font-weight:700;font-size:20px}
+.primary-button,.success-button,.secondary-button{border:0;border-radius:14px;padding:15px 18px;font:700 15px 'DM Sans';cursor:pointer;transition:.2s}.primary-button{background:var(--navy);color:#fff;box-shadow:0 8px 18px rgba(16,39,77,.2)}.primary-button:hover{background:#1c3c6d}.primary-button:disabled,.success-button:disabled,.secondary-button:disabled{opacity:.55;cursor:not-allowed}.controls{display:grid;grid-template-columns:1fr;gap:11px;margin-top:18px}.success-button{background:var(--mint);color:#fff}.success-button:hover{background:#3e9e87}.secondary-button{background:var(--paper);border:1px solid var(--navy);color:var(--navy)}.secondary-button:hover{background:#fff0d7}.button-icon{display:inline-grid;place-items:center;margin-right:8px;font-size:18px;line-height:1}.score-card{align-self:start;padding:24px;position:sticky;top:24px}.score-value{font:700 36px 'Space Grotesk';margin:12px 0 4px;color:var(--navy)}.score-value small{font:500 14px 'DM Sans';color:var(--muted)}.score-meta{color:var(--muted);font-size:14px}.state-card{text-align:center;padding:56px 24px}.state-card h2{font:700 24px 'Space Grotesk';margin:16px 0 8px}.state-card p{color:var(--muted);margin:0 0 24px}.loading-state{padding:90px 24px}.spinner{width:32px;height:32px;margin:auto;border:3px solid #dbe5f2;border-top-color:var(--coral);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}footer{max-width:1180px;margin:0 auto;padding:0 24px 28px;color:#8a96ad;font-size:13px}
+.filters-card{padding:20px 22px;margin-bottom:0}.filter-summary{position:relative;padding-right:28px;cursor:pointer;list-style:none}.filter-summary::-webkit-details-marker{display:none}.filter-summary:after{content:'＋';position:absolute;right:0;top:-4px;color:var(--coral);font-size:22px}.filters-card[open] .filter-summary:after{content:'−'}.filter-title{margin:7px 0 16px;font:700 19px 'Space Grotesk'}.filter-group{margin-top:16px}.filter-label{display:block;color:#607292;font-size:12px;font-weight:700;margin-bottom:8px}.badge-list{display:flex;flex-wrap:wrap;gap:8px}.filter-badge{border:1px solid #d8e0eb;background:var(--paper);color:#52617e;border-radius:99px;padding:9px 13px;font-weight:700;cursor:pointer}.filter-badge.selected{background:var(--navy);border-color:var(--navy);color:#fff}.filter-hint{display:block;color:#8a96ad;margin-top:14px}.history-panel{margin-top:16px;padding:22px}.history-heading{display:flex;align-items:center;justify-content:space-between}.history-heading h3{margin:7px 0 0;font:700 18px 'Space Grotesk'}.history-count{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#eaf0ff;color:#304fba;font-weight:700}.history-empty{padding:18px 0 2px;color:#8995aa;font-size:13px;line-height:1.45}.history-list{display:grid;gap:12px;padding:16px 0 0;margin:0;list-style:none}.history-list li{display:flex;align-items:center;justify-content:space-between;gap:8px}.history-item-main{display:flex;align-items:center;gap:9px;min-width:0}.history-index{display:grid;place-items:center;flex:none;width:24px;height:24px;border-radius:8px;background:#f1f3f8;color:#73809a;font-size:11px;font-weight:700}.history-item-main strong,.history-item-main span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.history-item-main strong{font-size:13px}.history-item-main span{margin-top:3px;color:#8995aa;font-size:11px}.history-list b{flex:none;color:#278357;font-size:12px}.history-fab,.history-mobile-drawer{display:none}
+@media(min-width:761px){.mobile-filters{display:none}.sidebar{display:flex;flex-direction:column;gap:16px;position:sticky;top:24px;align-self:start}.desktop-filters{display:block}.sidebar .history-panel{margin-top:0}.sidebar .controls{margin-top:0}}
+@media(max-width:760px){.topbar{height:76px;padding:0 16px}.brand-art{width:50px;height:50px}.brand-name{font-size:20px}.new-game-button{padding:10px 8px}.main-layout{display:block;padding:24px 16px calc(132px + env(safe-area-inset-bottom))}.desktop-filters{display:none}.mobile-filters{display:block;margin-bottom:26px}.filters-card{padding:16px 18px;margin:0}.filter-title{font-size:17px;margin-bottom:0}.filters-card[open] .filter-title{margin-bottom:16px}.intro{margin-bottom:20px}.intro h2{font-size:27px}.decorative-spark{display:none}.game-card{padding:22px 16px 24px}.card-heading{align-items:flex-start}.card-heading h1{font-size:29px}.points-badge{padding:10px 12px}.answer-panel{grid-template-columns:auto minmax(0,1fr);gap:8px 14px;margin:25px 0 25px;padding:18px 16px}.answer-panel strong{grid-column:1 / -1;font-size:21px}.answer-panel strong.obscured{font-size:18px}.text-button{grid-column:1 / -1;text-align:left;padding:2px 0}.hint{display:none}.clue-list li{min-height:54px;padding:12px 2px;font-size:14px}.clue-number{width:32px}.sidebar{display:contents}.sidebar .history-panel{display:none}.controls{position:fixed;z-index:30;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,248,234,.96);border-top:1px solid rgba(16,39,77,.12);box-shadow:0 -12px 30px rgba(16,39,77,.1)}.controls button{min-height:56px;padding:14px 8px}.button-icon{display:none}.history-fab{display:flex;align-items:center;gap:6px;position:fixed;z-index:29;right:16px;bottom:calc(88px + env(safe-area-inset-bottom));border:0;border-radius:99px;padding:10px 13px;background:var(--navy);color:#fff;font-weight:700;box-shadow:0 10px 25px rgba(16,39,77,.25)}footer{display:none}}
+
+/* Biblioteca visual oficial: marca, textura e ícones dos concepts. */
+.app-shell{position:relative;overflow-x:clip;background-image:url('/design/backgrounds/paper-grain.svg'),url('/design/backgrounds/paper-pattern.svg'),radial-gradient(circle at 8% 0%,#fff1c7 0,transparent 25%),radial-gradient(circle at 100% 40%,#e4f3f1 0,transparent 24%);background-size:160px 160px,160px 160px,auto,auto;background-position:center,left top,center,center;background-repeat:repeat,repeat,no-repeat,no-repeat;background-attachment:fixed,fixed,fixed,fixed}
+.app-shell::before,.app-shell::after{content:'';position:fixed;z-index:0;pointer-events:none;background-repeat:no-repeat}
+.app-shell::before{top:255px;left:0;width:clamp(150px,11vw,200px);aspect-ratio:220/520;background-image:url('/design/backgrounds/blob-coral.svg');background-position:left top;background-size:100% 100%}
+.app-shell::after{right:0;bottom:0;left:0;height:clamp(360px,31vw,520px);background-image:url('/design/backgrounds/wave-bottom.svg');background-position:bottom center;background-size:100% 100%}
+.topbar,.main-layout,footer{position:relative;z-index:1}
+.topbar{height:96px;overflow:hidden}
+.topbar::before{content:'';position:absolute;top:0;right:max(170px,calc((100vw - 1180px)/2 + 80px));width:320px;height:92px;background:url('/design/backgrounds/corner-shape.svg') top right/100% 100% no-repeat;pointer-events:none}
+.topbar>.brand-lockup,.topbar>.new-game-button{position:relative;z-index:1}
+.brand-lockup{display:flex;align-items:center;gap:16px;text-decoration:none}
+.brand-art{display:block;width:92px;height:72px;object-fit:contain}
+.brand-divider{width:2px;height:34px;background:rgba(16,39,77,.28)}
+.brand-tagline{color:var(--navy);font:700 18px 'Space Grotesk';letter-spacing:.16em;white-space:nowrap}
+.new-game-button{display:inline-flex;align-items:center;gap:9px;background:var(--coral);color:#fff;border-radius:14px;padding:14px 20px;box-shadow:0 8px 18px rgba(244,81,75,.18)}
+.new-game-button:before{content:'+';font-size:24px;font-weight:400;line-height:16px}
+.new-game-button:hover{background:#d9433e;border-color:transparent;color:#fff;transform:translateY(-1px)}
+.decorative-spark{display:block;width:52px;height:auto;object-fit:contain}
+.card-heading h1{font-size:32px}
+.game-card{border:2px solid var(--navy);}
+.answer-panel{border:1px solid #dce3f0}
+.text-button{display:inline-flex;align-items:center;gap:9px;white-space:nowrap}
+.text-button img{width:27px;height:21px;color:currentColor;opacity:.95}
+.filter-summary{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;align-items:center;column-gap:16px;row-gap:7px}
+.filter-icon{grid-column:1;grid-row:1;width:31px;height:24px;flex:none;color:var(--navy);margin-top:0}
+.filter-copy{display:contents}
+.filter-copy .eyebrow{grid-column:2;grid-row:1}
+.filter-summary .filter-title{grid-column:1 / -1;grid-row:2;margin:0}
+.filter-summary:after{top:6px;font-size:28px}
+.history-title{display:flex;align-items:center;gap:8px}
+.history-title img{width:22px;height:24px;color:var(--yellow)}
+.clue-check{width:22px;height:22px;color:var(--mint)}
+.clue-arrow{margin-left:auto;color:#8091bf;font-size:30px;line-height:20px}
+.button-icon{width:22px;height:22px;filter:brightness(0) invert(1)}
+.secondary-button .button-icon{filter:none}
+.controls button{display:flex;align-items:center;justify-content:center;gap:8px}
+@media(min-width:761px){.main-layout{padding-top:42px}.filters-card{border-color:#aeb8cb}.game-card{padding:30px 34px}.history-panel{border-color:#aeb8cb}}
+@media(max-width:760px){.topbar{height:80px}.topbar::before{top:-55px;right:auto;left:-70px;width:175px;height:125px;background-image:url('/design/backgrounds/blob-yellow.svg');background-position:center;background-size:contain}.brand-art{width:72px;height:58px}.brand-lockup{gap:10px}.brand-divider{height:26px}.brand-tagline{font-size:12px;letter-spacing:.12em}.new-game-button{background:transparent;color:var(--navy);border-color:#d9d4cb;box-shadow:none;padding:11px 15px}.new-game-button:before{display:none}.new-game-button:hover{background:#fff0d7;color:var(--navy);border-color:#d9d4cb}.filter-summary{column-gap:14px;row-gap:7px}.filter-icon{width:30px;height:23px;margin-top:0}.game-card{border-width:1px}.text-button img{width:25px;height:19px}.clue-check{width:20px;height:20px}.button-icon{display:none}.app-shell{background-image:url('/design/backgrounds/paper-grain.svg'),url('/design/backgrounds/paper-pattern.svg'),url('/design/backgrounds/blob-blue-soft.svg'),radial-gradient(circle at 8% 0%,#fff1c7 0,transparent 25%),radial-gradient(circle at 100% 40%,#e4f3f1 0,transparent 24%);background-size:120px 120px,120px 120px,210px auto,auto,auto;background-position:center,left top,right -105px top 380px,center,center;background-repeat:repeat,repeat,no-repeat,no-repeat,no-repeat;background-attachment:fixed,fixed,fixed,fixed,fixed}.app-shell::before,.app-shell::after{display:none}}
+
+/* Composição ornamental do conceito desktop. */
+@media(min-width:761px){
+  .topbar{height:108px;padding-inline:max(24px,calc((100vw - 1320px)/2))}
+  .topbar::before{right:max(150px,calc((100vw - 1320px)/2 + 70px))}
+  .topbar::after{content:'';position:absolute;right:max(92px,calc((100vw - 1320px)/2 - 16px));top:30px;width:49px;height:38px;background:url('/design/ornaments/spark-yellow-duo.svg') center/contain no-repeat;pointer-events:none}
+  .brand-art{width:142px;height:96px}
+  .brand-divider{height:44px}
+  .brand-tagline{font-size:20px}
+  .main-layout{max-width:1320px;padding-top:46px}
+  .intro{position:relative;justify-content:flex-start;margin-bottom:26px}
+  .intro-copy{position:relative}
+  .intro .eyebrow{position:relative;display:inline-block;padding:9px 17px;border-radius:9px;background:var(--yellow);color:var(--navy);font-size:14px;letter-spacing:.08em;box-shadow:0 7px 16px rgba(246,196,69,.22)}
+  .intro .eyebrow::after{content:'';position:absolute;left:17px;bottom:-10px;border:6px solid transparent;border-top-color:var(--yellow)}
+  .intro h2{margin-top:13px;font-size:48px;line-height:1}
+  .intro-spark{position:absolute;width:58px;margin:0;z-index:1}
+  .intro-spark-yellow{left:-86px;top:16px;transform:rotate(180deg)}
+  .intro-spark-coral{left:460px;top:38px;transform:rotate(-14deg)}
+  .game-card{border-radius:30px}
+  .points-badge{position:relative}
+  .points-badge::after{content:'';position:absolute;right:-43px;top:-29px;width:42px;height:33px;background:url('/design/ornaments/spark-yellow-duo.svg') center/contain no-repeat;transform:rotate(-12deg);pointer-events:none}
+  .filters-card,.history-panel,.controls{position:relative}
+  .filters-card::before{content:'';position:absolute;left:-43px;top:-28px;width:56px;height:47px;background:url('/design/ornaments/spark-coral.svg') center/contain no-repeat;transform:rotate(164deg);pointer-events:none}
+  .history-panel::after{content:'';position:absolute;right:-44px;top:12px;width:43px;height:34px;background:url('/design/ornaments/spark-yellow-duo.svg') center/contain no-repeat;transform:rotate(-5deg);pointer-events:none}
+  .controls::before,.controls::after{content:'';position:absolute;background-position:center;background-size:contain;background-repeat:no-repeat;pointer-events:none}
+  .controls::before{right:-45px;top:3px;width:43px;height:34px;background-image:url('/design/ornaments/spark-mint-duo.svg');transform:rotate(-4deg)}
+  .controls::after{right:-75px;bottom:-71px;width:58px;height:48px;background-image:url('/design/ornaments/spark-navy.svg');transform:rotate(68deg)}
+}
+
+@media(max-width:760px){
+  .topbar::after{content:'';position:absolute;right:-5px;top:42px;width:43px;height:36px;background:url('/design/ornaments/spark-coral.svg') center/contain no-repeat;transform:rotate(8deg);pointer-events:none}
+  .intro{position:relative;display:block}
+  .intro-copy{position:relative}
+  .intro-spark{position:absolute;width:42px;margin:0}
+  .intro-spark-yellow{right:8px;top:-4px;transform:rotate(180deg)}
+  .intro-spark-coral{right:-2px;top:48px;transform:rotate(-14deg)}
+  .points-badge{position:relative}
+  .points-badge::after{content:'';position:absolute;left:-44px;bottom:-18px;width:40px;height:30px;background:url('/design/ornaments/spark-mint-duo.svg') center/contain no-repeat;pointer-events:none}
+  .controls::before,.controls::after{content:'';position:absolute;top:-16px;width:42px;height:30px;background-position:center;background-size:contain;background-repeat:no-repeat;pointer-events:none}
+  .controls::before{left:-12px;background-image:url('/design/ornaments/spark-mint-duo.svg')}
+  .controls::after{right:-12px;background-image:url('/design/ornaments/spark-yellow.svg')}
+}
+
+/* Moldura da carta: somente o topo sobe à direita; os raios usam medidas reais. */
+.game-card{
+  position:relative;
+  background:rgba(255,253,248,.96);
+  border:6px solid var(--navy);
+  border-radius:30px;
+}
+.game-card--outlined{
+  border-color:transparent;
+  background:transparent;
+  box-shadow:none;
+}
+.game-card-outline{
+  position:absolute;
+  z-index:0;
+  inset:-6px;
+  width:calc(100% + 12px);
+  height:calc(100% + 12px);
+  overflow:visible;
+  pointer-events:none;
+  filter:drop-shadow(0 18px 45px rgba(16,39,77,.09));
+}
+.game-card-outline path{
+  fill:rgba(255,253,248,.96);
+  stroke:var(--navy);
+  stroke-width:6;
+}
+.game-card > :not(.game-card-outline){position:relative;z-index:1}
+@media(max-width:760px){
+  .game-card{border-width:5px;border-radius:22px}
+  .game-card--outlined{border-color:transparent}
+  .game-card-outline{inset:-5px;width:calc(100% + 10px);height:calc(100% + 10px)}
+  .game-card-outline path{stroke-width:5}
+}

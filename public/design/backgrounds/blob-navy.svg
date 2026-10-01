@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 330" fill="none" aria-hidden="true">
+  <defs><pattern id="speckle" width="31" height="29" patternUnits="userSpaceOnUse"><circle cx="5" cy="7" r="1.1" fill="#fff" opacity=".3"/><circle cx="22" cy="19" r=".7" fill="#fff" opacity=".2"/></pattern></defs>
+  <path d="M2 205C15 102 113 19 229 5c118-14 247 31 282 120 34 87-40 166-146 193-110 28-263 6-329-41C10 258-2 234 2 205Z" fill="#10274d"/>
+  <path d="M2 205C15 102 113 19 229 5c118-14 247 31 282 120 34 87-40 166-146 193-110 28-263 6-329-41C10 258-2 234 2 205Z" fill="url(#speckle)" opacity=".28"/>
+</svg>

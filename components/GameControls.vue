@@ -1,0 +1,2 @@
+<script setup lang="ts">defineProps<{ roundFinished: boolean; loading: boolean }>(); const emit = defineEmits<{ correct: []; newCard: [] }>()</script>
+<template><div class="controls"><button class="success-button" :disabled="roundFinished || loading" @click="emit('correct')"><img class="button-icon" src="/design/icons/check.svg" alt="" />{{ roundFinished ? 'Rodada concluída' : 'Acertaram' }}</button><button class="secondary-button" :disabled="loading" @click="emit('newCard')"><img class="button-icon" src="/design/icons/cards.svg" alt="" />Nova carta</button></div></template>
