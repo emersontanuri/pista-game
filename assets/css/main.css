@@ -13,13 +13,13 @@
 @media(max-width:760px){.topbar{height:76px;padding:0 16px}.brand-art{width:50px;height:50px}.brand-name{font-size:20px}.new-game-button{padding:10px 8px}.main-layout{display:block;padding:24px 16px calc(132px + env(safe-area-inset-bottom))}.desktop-filters{display:none}.mobile-filters{display:block;margin-bottom:26px}.filters-card{padding:16px 18px;margin:0}.filter-title{font-size:17px;margin-bottom:0}.filters-card[open] .filter-title{margin-bottom:16px}.intro{margin-bottom:20px}.intro h2{font-size:27px}.decorative-spark{display:none}.game-card{padding:22px 16px 24px}.card-heading{align-items:flex-start}.card-heading h1{font-size:29px}.points-badge{padding:10px 12px}.answer-panel{grid-template-columns:auto minmax(0,1fr);gap:8px 14px;margin:25px 0 25px;padding:18px 16px}.answer-panel strong{grid-column:1 / -1;font-size:21px}.answer-panel strong.obscured{font-size:18px}.text-button{grid-column:1 / -1;text-align:left;padding:2px 0}.hint{display:none}.clue-list li{min-height:54px;padding:12px 2px;font-size:14px}.clue-number{width:32px}.sidebar{display:contents}.sidebar .history-panel{display:none}.controls{position:fixed;z-index:30;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,248,234,.96);border-top:1px solid rgba(16,39,77,.12);box-shadow:0 -12px 30px rgba(16,39,77,.1)}.controls button{min-height:56px;padding:14px 8px}.button-icon{display:none}.history-fab{display:flex;align-items:center;gap:6px;position:fixed;z-index:29;right:16px;bottom:calc(88px + env(safe-area-inset-bottom));border:0;border-radius:99px;padding:10px 13px;background:var(--navy);color:#fff;font-weight:700;box-shadow:0 10px 25px rgba(16,39,77,.25)}footer{display:none}}
 
 /* Biblioteca visual oficial: marca, textura e ícones dos concepts. */
-.app-shell{position:relative;overflow-x:clip;background-image:url('/design/backgrounds/paper-grain.svg'),url('/design/backgrounds/paper-pattern.svg'),radial-gradient(circle at 8% 0%,#fff1c7 0,transparent 25%),radial-gradient(circle at 100% 40%,#e4f3f1 0,transparent 24%);background-size:160px 160px,160px 160px,auto,auto;background-position:center,left top,center,center;background-repeat:repeat,repeat,no-repeat,no-repeat;background-attachment:fixed,fixed,fixed,fixed}
+.app-shell{position:relative;overflow-x:clip;background-image:url('/design/backgrounds/paper-grain.svg'),url('/design/backgrounds/paper-pattern.svg'),radial-gradient(circle at 8% 0%,color-mix(in srgb,var(--yellow) 24%,transparent) 0,transparent 25%),radial-gradient(circle at 100% 40%,color-mix(in srgb,var(--mint) 18%,transparent) 0,transparent 24%);background-size:160px 160px,160px 160px,auto,auto;background-position:center,left top,center,center;background-repeat:repeat,repeat,no-repeat,no-repeat;background-attachment:fixed,fixed,fixed,fixed}
 .app-shell::before,.app-shell::after{content:'';position:fixed;z-index:0;pointer-events:none;background-repeat:no-repeat}
 .app-shell::before{top:255px;left:0;width:clamp(150px,11vw,200px);aspect-ratio:220/520;background-image:url('/design/backgrounds/blob-coral.svg');background-position:left top;background-size:100% 100%}
 .app-shell::after{right:0;bottom:0;left:0;height:clamp(360px,31vw,520px);background-image:url('/design/backgrounds/wave-bottom.svg');background-position:bottom center;background-size:100% 100%}
 .topbar,.main-layout,footer{position:relative;z-index:1}
-.topbar{height:96px;overflow:hidden}
-.topbar::before{content:'';position:absolute;top:0;right:max(170px,calc((100vw - 1180px)/2 + 80px));width:320px;height:92px;background:url('/design/backgrounds/corner-shape.svg') top right/100% 100% no-repeat;pointer-events:none}
+.topbar{height:96px;overflow:visible}
+.topbar::before{content:'';position:absolute;z-index:0;top:-1px;right:max(145px,calc((100vw - 1180px)/2 + 55px));width:420px;height:120px;background:url('/design/backgrounds/corner-shape.svg') top right/420px 120px no-repeat;pointer-events:none}
 .topbar>.brand-lockup,.topbar>.new-game-button{position:relative;z-index:1}
 .brand-lockup{display:flex;align-items:center;gap:16px;text-decoration:none}
 .brand-art{display:block;width:92px;height:72px;object-fit:contain}
@@ -48,14 +48,14 @@
 .secondary-button .button-icon{filter:none}
 .controls button{display:flex;align-items:center;justify-content:center;gap:8px}
 @media(min-width:761px){.main-layout{padding-top:42px}.filters-card{border-color:#aeb8cb}.game-card{padding:30px 34px}.history-panel{border-color:#aeb8cb}}
-@media(max-width:760px){.topbar{height:80px}.topbar::before{top:-55px;right:auto;left:-70px;width:175px;height:125px;background-image:url('/design/backgrounds/blob-yellow.svg');background-position:center;background-size:contain}.brand-art{width:72px;height:58px}.brand-lockup{gap:10px}.brand-divider{height:26px}.brand-tagline{font-size:12px;letter-spacing:.12em}.new-game-button{background:transparent;color:var(--navy);border-color:#d9d4cb;box-shadow:none;padding:11px 15px}.new-game-button:before{display:none}.new-game-button:hover{background:#fff0d7;color:var(--navy);border-color:#d9d4cb}.filter-summary{column-gap:14px;row-gap:7px}.filter-icon{width:30px;height:23px;margin-top:0}.game-card{border-width:1px}.text-button img{width:25px;height:19px}.clue-check{width:20px;height:20px}.button-icon{display:none}.app-shell{background-image:url('/design/backgrounds/paper-grain.svg'),url('/design/backgrounds/paper-pattern.svg'),url('/design/backgrounds/blob-blue-soft.svg'),radial-gradient(circle at 8% 0%,#fff1c7 0,transparent 25%),radial-gradient(circle at 100% 40%,#e4f3f1 0,transparent 24%);background-size:120px 120px,120px 120px,210px auto,auto,auto;background-position:center,left top,right -105px top 380px,center,center;background-repeat:repeat,repeat,no-repeat,no-repeat,no-repeat;background-attachment:fixed,fixed,fixed,fixed,fixed}.app-shell::before,.app-shell::after{display:none}}
+@media(max-width:760px){.topbar{height:82px}.topbar::before{top:-44px;right:auto;left:-70px;width:175px;height:125px;background-image:url('/design/backgrounds/blob-yellow.svg');background-position:center;background-size:contain}.brand-art{width:84px;height:68px;margin-top:3px}.brand-lockup{gap:10px}.brand-divider{height:29px}.brand-tagline{font-size:12px;letter-spacing:.12em}.new-game-button{background:transparent;color:var(--navy);border-color:#d9d4cb;box-shadow:none;padding:11px 15px}.new-game-button:before{display:none}.new-game-button:hover{background:#fff0d7;color:var(--navy);border-color:#d9d4cb}.filter-summary{column-gap:14px;row-gap:7px}.filter-icon{width:30px;height:23px;margin-top:0}.game-card{border-width:1px}.text-button img{width:25px;height:19px}.clue-check{width:20px;height:20px}.button-icon{display:none}.app-shell{background-image:url('/design/backgrounds/paper-grain.svg'),url('/design/backgrounds/paper-pattern.svg'),url('/design/backgrounds/blob-blue-soft.svg'),radial-gradient(circle at 8% 0%,color-mix(in srgb,var(--yellow) 18%,transparent) 0,transparent 25%),radial-gradient(circle at 100% 40%,color-mix(in srgb,var(--mint) 14%,transparent) 0,transparent 24%);background-size:120px 120px,120px 120px,210px auto,auto,auto;background-position:center,left top,right -105px top 380px,center,center;background-repeat:repeat,repeat,no-repeat,no-repeat,no-repeat;background-attachment:fixed,fixed,fixed,fixed,fixed}.app-shell::before{display:none}.app-shell::after{display:block;z-index:0;height:clamp(280px,55vw,420px);background-size:100% 100%;background-position:bottom center}}
 
 /* Composição ornamental do conceito desktop. */
 @media(min-width:761px){
   .topbar{height:108px;padding-inline:max(24px,calc((100vw - 1320px)/2))}
-  .topbar::before{right:max(150px,calc((100vw - 1320px)/2 + 70px))}
-  .topbar::after{content:'';position:absolute;right:max(92px,calc((100vw - 1320px)/2 - 16px));top:30px;width:49px;height:38px;background:url('/design/ornaments/spark-yellow-duo.svg') center/contain no-repeat;pointer-events:none}
-  .brand-art{width:142px;height:96px}
+  .topbar::before{right:max(120px,calc((100vw - 1320px)/2 + 40px));width:420px;height:120px;background-size:420px 120px}
+  .topbar::after{content:'';position:absolute;right:max(70px,calc((100vw - 1320px)/2 - 2px));top:31px;width:44px;height:34px;background:url('/design/ornaments/spark-yellow-duo.svg') center/contain no-repeat;pointer-events:none}
+  .brand-art{width:160px;height:112px;margin-top:7px}
   .brand-divider{height:44px}
   .brand-tagline{font-size:20px}
   .main-layout{max-width:1320px;padding-top:46px}
@@ -63,33 +63,30 @@
   .intro-copy{position:relative}
   .intro .eyebrow{position:relative;display:inline-block;padding:9px 17px;border-radius:9px;background:var(--yellow);color:var(--navy);font-size:14px;letter-spacing:.08em;box-shadow:0 7px 16px rgba(246,196,69,.22)}
   .intro .eyebrow::after{content:'';position:absolute;left:17px;bottom:-10px;border:6px solid transparent;border-top-color:var(--yellow)}
-  .intro h2{margin-top:13px;font-size:48px;line-height:1}
+  .intro h2{margin-top:13px;font-size:52px;font-weight:700;line-height:.98;letter-spacing:-.045em}
   .intro-spark{position:absolute;width:58px;margin:0;z-index:1}
-  .intro-spark-yellow{left:-86px;top:16px;transform:rotate(180deg)}
-  .intro-spark-coral{left:460px;top:38px;transform:rotate(-14deg)}
+  .intro-spark-yellow{left:-62px;top:18px;transform:rotate(180deg)}
+  .intro-spark-coral{left:510px;top:41px;transform:rotate(-14deg)}
   .game-card{border-radius:30px}
   .points-badge{position:relative}
   .points-badge::after{content:'';position:absolute;right:-43px;top:-29px;width:42px;height:33px;background:url('/design/ornaments/spark-yellow-duo.svg') center/contain no-repeat;transform:rotate(-12deg);pointer-events:none}
   .filters-card,.history-panel,.controls{position:relative}
-  .filters-card::before{content:'';position:absolute;left:-43px;top:-28px;width:56px;height:47px;background:url('/design/ornaments/spark-coral.svg') center/contain no-repeat;transform:rotate(164deg);pointer-events:none}
-  .history-panel::after{content:'';position:absolute;right:-44px;top:12px;width:43px;height:34px;background:url('/design/ornaments/spark-yellow-duo.svg') center/contain no-repeat;transform:rotate(-5deg);pointer-events:none}
+  .filters-card::before{content:'';position:absolute;left:-26px;top:-22px;width:52px;height:43px;background:url('/design/ornaments/spark-coral.svg') center/contain no-repeat;transform:rotate(164deg);pointer-events:none}
+  .history-panel::after{content:'';position:absolute;right:-28px;top:15px;width:40px;height:32px;background:url('/design/ornaments/spark-yellow-duo.svg') center/contain no-repeat;transform:rotate(-5deg);pointer-events:none}
   .controls::before,.controls::after{content:'';position:absolute;background-position:center;background-size:contain;background-repeat:no-repeat;pointer-events:none}
-  .controls::before{right:-45px;top:3px;width:43px;height:34px;background-image:url('/design/ornaments/spark-mint-duo.svg');transform:rotate(-4deg)}
-  .controls::after{right:-75px;bottom:-71px;width:58px;height:48px;background-image:url('/design/ornaments/spark-navy.svg');transform:rotate(68deg)}
+  .controls::before{right:-28px;top:3px;width:41px;height:32px;background-image:url('/design/ornaments/spark-mint-duo.svg');transform:rotate(-4deg)}
+  .controls::after{right:-50px;bottom:-58px;width:53px;height:44px;background-image:url('/design/ornaments/spark-navy.svg');transform:rotate(68deg)}
 }
 
 @media(max-width:760px){
-  .topbar::after{content:'';position:absolute;right:-5px;top:42px;width:43px;height:36px;background:url('/design/ornaments/spark-coral.svg') center/contain no-repeat;transform:rotate(8deg);pointer-events:none}
+  .topbar::after{display:none}
   .intro{position:relative;display:block}
   .intro-copy{position:relative}
-  .intro-spark{position:absolute;width:42px;margin:0}
-  .intro-spark-yellow{right:8px;top:-4px;transform:rotate(180deg)}
-  .intro-spark-coral{right:-2px;top:48px;transform:rotate(-14deg)}
+  .intro-spark{display:block;position:absolute;width:42px;margin:0}
+  .intro-spark-yellow{right:-18px;top:38px;transform:rotate(180deg)}
+  .intro-spark-coral{display:none}
   .points-badge{position:relative}
-  .points-badge::after{content:'';position:absolute;left:-44px;bottom:-18px;width:40px;height:30px;background:url('/design/ornaments/spark-mint-duo.svg') center/contain no-repeat;pointer-events:none}
-  .controls::before,.controls::after{content:'';position:absolute;top:-16px;width:42px;height:30px;background-position:center;background-size:contain;background-repeat:no-repeat;pointer-events:none}
-  .controls::before{left:-12px;background-image:url('/design/ornaments/spark-mint-duo.svg')}
-  .controls::after{right:-12px;background-image:url('/design/ornaments/spark-yellow.svg')}
+  .points-badge::after,.controls::before,.controls::after{display:none}
 }
 
 /* Moldura da carta: somente o topo sobe à direita; os raios usam medidas reais. */

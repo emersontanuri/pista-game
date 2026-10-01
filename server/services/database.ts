@@ -17,7 +17,9 @@ function getDb() {
   db.exec(`CREATE TABLE IF NOT EXISTS words (id INTEGER PRIMARY KEY AUTOINCREMENT, word TEXT NOT NULL, category TEXT NOT NULL, subcategory TEXT NOT NULL DEFAULT 'Outros', difficulty INTEGER NOT NULL CHECK (difficulty BETWEEN 1 AND 10), usage_count INTEGER NOT NULL DEFAULT 0, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, UNIQUE(word, category)); CREATE TABLE IF NOT EXISTS clues (id INTEGER PRIMARY KEY AUTOINCREMENT, word_id INTEGER NOT NULL REFERENCES words(id) ON DELETE CASCADE, clue TEXT NOT NULL, UNIQUE(word_id, clue)); CREATE TABLE IF NOT EXISTS categories (name TEXT PRIMARY KEY, description TEXT NOT NULL, weight INTEGER NOT NULL DEFAULT 1 CHECK (weight >= 0)); CREATE TABLE IF NOT EXISTS difficulties (level INTEGER PRIMARY KEY CHECK (level BETWEEN 1 AND 10), description TEXT NOT NULL, weight INTEGER NOT NULL DEFAULT 1 CHECK (weight >= 0)); CREATE TABLE IF NOT EXISTS subcategories (id INTEGER PRIMARY KEY AUTOINCREMENT, category TEXT NOT NULL, name TEXT NOT NULL, description TEXT NOT NULL, UNIQUE(category, name));`)
   const columns = db.prepare('PRAGMA table_info(words)').all() as Array<{ name: string }>
   if (!columns.some((column) => column.name === 'subcategory')) db.exec("ALTER TABLE words ADD COLUMN subcategory TEXT NOT NULL DEFAULT 'Outros'")
-  seedDatabase(false, db)
+  // A aplicação precisa das configurações para funcionar, mas o catálogo de
+  // cartas deve ser carregado explicitamente pelo comando de seed.
+  seedConfiguration(db)
   return db
 }
 

@@ -45,7 +45,7 @@ O produto deve parecer um caderno de desafios moderno, ensolarado e bem organiza
 - Os sparks acompanham pontos de atenção do jogo: amarelo e coral no título, amarelo na pontuação, coral nos filtros, amarelo no histórico e menta/navy junto aos controles.
 - Sparks usam raios orgânicos e afunilados: leques de três raios nos acentos principais e versões curtas de dois raios junto a badges e ações. Não usar barras retangulares rotacionadas.
 - Ornamentos podem ultrapassar parcialmente os limites dos cartões e da viewport, mas permanecem atrás do conteúdo e nunca bloqueiam interação ou leitura.
-- No mobile, reduzir a composição: manter os acentos próximos ao título, pontuação e controles, usar blobs periféricos e ocultar a onda inferior quando ela competir com a barra fixa.
+- No mobile, reduzir a composição: manter apenas um spark amarelo junto ao título, usar blobs periféricos e manter a onda inferior visível no fundo, atrás do conteúdo e da barra fixa.
 
 ## 4. Tokens visuais
 
@@ -147,6 +147,7 @@ Todo componente interativo precisa ter estados identificáveis para repouso, hov
 - Fixar controles essenciais no rodapé, respeitando `safe-area-inset-bottom`.
 - Manter alvos de toque grandes, com altura mínima aproximada de `56px` para ações principais.
 - Reduzir ornamentos antes de reduzir legibilidade.
+- No mobile, usar somente o spark amarelo associado ao título; a onda inferior continua visível como camada de fundo.
 - Evitar que títulos, respostas ou dicas criem overflow horizontal.
 
 ## 8. Linguagem de interface

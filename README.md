@@ -16,4 +16,4 @@ O estado do jogo fica em `localStorage` na chave `perfilGameState`. As cartas fi
 `npm run typecheck` e `npm test`.
 
 ## Carga inicial
-`npm run seed` carrega o catálogo e preserva os dados existentes. Para apagar os dados atuais antes da carga, use `npm run seed:reset`. O script também aceita a flag `--reset` quando executado diretamente (`npm exec -- tsx server/scripts/seed.ts --reset`).
+Categorias, dificuldades e subcategorias são criadas automaticamente quando o banco é aberto. As cartas não são carregadas no startup: dentro do container, execute `docker compose exec perfil npm run seed` para carregar o catálogo preservando os dados existentes. Para apagar os dados atuais antes da carga, use `docker compose exec perfil npm run seed:reset`. O script também aceita a flag `--reset` quando executado diretamente (`npm exec -- tsx server/scripts/seed.ts --reset`).
