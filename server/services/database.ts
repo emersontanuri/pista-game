@@ -10,7 +10,7 @@ let db: Db | undefined
 
 function getDb() {
   if (db) return db
-  const path = resolve(process.env.PERFIL_DATABASE_PATH || 'server/data/perfil.sqlite')
+  const path = resolve(process.env.NUXT_DATABASE_PATH || process.env.PERFIL_DATABASE_PATH || 'server/data/perfil.sqlite')
   mkdirSync(dirname(path), { recursive: true })
   db = new Database(path)
   db.pragma('foreign_keys = ON')

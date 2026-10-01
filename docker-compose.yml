@@ -3,11 +3,12 @@ services:
     build: .
     ports: ["8104:3000"]
     environment:
-      APP_ENV: ${APP_ENV:-production}
-      NODE_ENV: ${APP_ENV:-production}
-      OPENAI_API_KEY: ${OPENAI_API_KEY}
-      OPENAI_MODEL: ${OPENAI_MODEL:-${OPENAI_MODEL:-gpt-4o-mini}}
-      PERFIL_DATABASE_PATH: ${PERFIL_DATABASE_PATH:-/app/data/perfil.sqlite}
+      NODE_ENV: ${NODE_ENV:-production}
+      NUXT_APP_ENV: ${NUXT_APP_ENV:-production}
+      NUXT_PUBLIC_APP_ENV: ${NUXT_PUBLIC_APP_ENV:-production}
+      NUXT_OPENAI_API_KEY: ${NUXT_OPENAI_API_KEY}
+      NUXT_OPENAI_MODEL: ${NUXT_OPENAI_MODEL:-gpt-4o-mini}
+      NUXT_DATABASE_PATH: ${NUXT_DATABASE_PATH:-/app/data/perfil.sqlite}
     volumes:
       - perfil-data:/app/data
     restart: unless-stopped
