@@ -1,5 +1,13 @@
 FROM node:22-bookworm-slim AS builder
 WORKDIR /app
+
+# better-sqlite3 is a native module. The slim image does not include the
+# Python and C/C++ toolchain required by node-gyp when no prebuilt binary is
+# available for the target environment.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends python3 make g++ \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY package*.json ./
 RUN npm install
 COPY . .
