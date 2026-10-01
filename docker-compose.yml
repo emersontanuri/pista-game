@@ -12,5 +12,8 @@ services:
     volumes:
       - perfil-data:/app/data
     restart: unless-stopped
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
 volumes:
   perfil-data:
