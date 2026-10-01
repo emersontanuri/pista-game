@@ -17,3 +17,4 @@ services:
       - 8.8.8.8
 volumes:
   perfil-data:
+    name: ${DATA_VOLUME_NAME:-pista-game_perfil-data}
