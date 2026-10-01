@@ -8,7 +8,7 @@ services:
       NUXT_PUBLIC_APP_ENV: ${NUXT_PUBLIC_APP_ENV:-production}
       NUXT_OPENAI_API_KEY: ${NUXT_OPENAI_API_KEY}
       NUXT_OPENAI_MODEL: ${NUXT_OPENAI_MODEL:-gpt-4o-mini}
-      NUXT_DATABASE_PATH: ${NUXT_DATABASE_PATH:-/app/data/perfil.sqlite}
+      NUXT_DATABASE_PATH: /app/data/perfil.sqlite
     volumes:
       - perfil-data:/app/data
     restart: unless-stopped
