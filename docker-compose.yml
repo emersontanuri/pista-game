@@ -3,9 +3,10 @@ services:
     build: .
     ports: ["8104:3000"]
     environment:
+      APP_ENV: ${APP_ENV:-production}
       NODE_ENV: ${APP_ENV:-production}
       OPENAI_API_KEY: ${OPENAI_API_KEY}
-      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      OPENAI_MODEL: ${OPENAI_MODEL:-${OPENAI_MODEL:-gpt-4o-mini}}
       PERFIL_DATABASE_PATH: ${PERFIL_DATABASE_PATH:-/app/data/perfil.sqlite}
     volumes:
       - perfil-data:/app/data
